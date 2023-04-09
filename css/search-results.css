@@ -25,6 +25,15 @@ body {
     border-color: black;
     border: 2px;
     }
+
+    .homepage {
+      text-decoration: none;
+      color: black;
+    }
+
+    .homepage:hover {
+      text-decoration: none;
+    }
   
   .results-container h2 {
     margin: 0 0 20px;
