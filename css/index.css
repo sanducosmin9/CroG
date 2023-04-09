@@ -21,16 +21,6 @@ h1 {
   margin-bottom: 30px;
 }
 
-form {
-  gap: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-top: 10px;
-  text-align: center;
-}
-
 .search-bar {
   background-color: #fdfdfd;
   border: 1px solid #ccc;
@@ -64,61 +54,6 @@ form {
   outline: none;
 }
 
-.select-wrapper {
-  border: #e7e7e7 solid 3px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 15px;
-  display: inline-block;
-  padding: 10px 10px 10px 10px;
-  position: relative;
-  vertical-align: top;
-}
-
-.select-wrapper:hover {
-  background-color: #0077cc;
-  border: #0077cc solid 3px;
-  transition: 400ms;
-}
-
-.dropdown {
-  text-align: center;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  outline: none;
-  padding: 0;
-  cursor: pointer;
-  background: none;
-  color: #333;
-}
-
-.dropdown:hover {
-  color: white;
-  transition: 300ms;
-}
-
-option {
-  background-color: #fff;
-  color: #333;
-  font-size: 16px;
-  font-weight: normal;
-}
-
-option:hover,
-option:focus {
-  background-color: #eee;
-  color: #000;
-}
-
-/* Alte stiluri */
-
-label {
-  font-weight: bold;
-}
-
 button {
   width: 160px;
   display: flex;
@@ -142,4 +77,40 @@ button {
 
 button:hover {
   background-color: #f0594b;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 200px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion-selector {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
 }

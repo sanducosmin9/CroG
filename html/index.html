@@ -2,46 +2,87 @@
 <html>
   <head>
     <title>CroG</title>
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
   </head>
   <body>
     <div class="container">
       <h1>CroG</h1>
-    <div class="search-container">
-      <input type="text" class="search-bar" id="search" name="search" placeholder="Cautare">
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-bar"
+          name="search"
+          placeholder="Cautare"
+        />
+      </div>
+
+      <div class="accordion-container">
+        <div class="accordion-selector">
+          <button class="accordion">Limbaj</button>
+          <div class="panel">
+            <div>
+              <label>JavaScript</label>
+              <input type="checkbox" value="Tip1" />
+            </div>
+            <div>
+              <label>WebGL</label>
+              <input type="checkbox" value="Tip1" />
+            </div>
+            <div>
+              <label>WebAssembly</label>
+              <input type="checkbox" value="Tip1" />
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-selector">
+          <button class="accordion">Stil artistic</button>
+          <div class="panel">
+            <div>
+              <label>2D</label>
+              <input type="checkbox" value="Tip1" />
+            </div>
+            <div>
+              <label>3D</label>
+              <input type="checkbox" value="Tip1" />
+            </div>
+            <div>
+              <label>animatie</label>
+              <input type="checkbox" value="Tip1" />
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-selector">
+          <button class="accordion">Maniera de interactiune</button>
+          <div class="panel">
+            <div>
+              <label>Clasica</label>
+              <input type="checkbox" value="Tip1" />
+            </div>
+            <div>
+              <label>Tactila</label>
+              <input type="checkbox" value="Tip1" />
+            </div>
+            <div>
+              <label>Vocala</label>
+              <input type="checkbox" value="Tip1" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button
+          onclick="window.location.href='search-results.html'"
+          type="submit"
+        >
+          Caută
+        </button>
+        <button onclick="window.location.href='add.html'" type="button">
+          Adaugă Resursă
+        </button>
+      </div>
     </div>
-  
-  <form>
-    <div class="select-wrapper">
-      <select class="dropdown" id="category" name="category">
-        <option value="all">Categorie</option>
-        <option value="resursa1">Resursa 1</option>
-        <option value="resursa2">Resursa 2</option>
-        <option value="resursa3">Resursa 3</option>
-      </select>
-    </div>
-    
-    <div class="select-wrapper">
-      <select class="dropdown" id="type" name="type">
-        <option value="all">Tip</option>
-        <option value="video">Video</option>
-        <option value="articol">Articol</option>
-        <option value="prezentare">Prezentare</option>
-      </select>
-    </div>
-    
-    <div class="select-wrapper">
-      <select class="dropdown" id="difficulty" name="difficulty">
-        <option value="all">Dificultate</option>
-        <option value="usor">Ușor</option>
-        <option value="mediu">Mediu</option>
-        <option value="greu">Greu</option>
-      </select>
-    </div>
-  </form>
-  <div class="buttons">
-    <button onclick="window.location.href='search-results.html'" type="submit">Caută</button>
-    <button onclick="window.location.href='add.html'" type="button">Adaugă Resursă</button>
-  </div>
-  
-</div>
+    <script src="../js/accordion.js"></script>
+  </body>
+</html>
