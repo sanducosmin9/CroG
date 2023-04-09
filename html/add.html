@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adauga Resurse Creative Coding</title>
+    <link rel="stylesheet" type="text/css" href="../css/add.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form>
+        <h1>Adauga o resursa</h1>
+        <div class="form-row">
+          <label for="titlu">Titlu</label>
+          <input type="text" id="titlu" name="titlu" required />
+        </div>
+        <div class="form-row">
+          <label for="autor">Autor</label>
+          <input type="text" id="autor" name="autor" required />
+        </div>
+        <div class="form-row">
+          <label for="categorie">Categorie</label>
+          <select id="categorie" name="categorie" required>
+            <option value="">--Selecteaza o categorie--</option>
+            <option value="WebGL">WebGL</option>
+            <option value="WebAssembly">WebAssembly</option>
+            <option value="JavaScript">JavaScript</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="link">Link</label>
+          <input type="url" id="link" name="link" required />
+        </div>
+        <div class="form-row">
+          <label for="descriere">Descriere</label>
+          <textarea id="descriere" name="descriere" required></textarea>
+        </div>
+        <button type="submit">Adauga resursa</button>
+      </form>
+    </div>
+  </body>
+</html>
