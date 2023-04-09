@@ -80,6 +80,7 @@ button:hover {
 }
 
 .accordion {
+  z-index: 1;
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -103,14 +104,45 @@ button:hover {
   gap: 10px;
 }
 
-.active, .accordion:hover {
+.active {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+} 
+
+.accordion:hover {
   background-color: #ccc;
 }
 
+input[type="checkbox"] {
+  float: left;
+  margin-right: 10px; /* add some space between the checkbox and the label */
+}
+
+.checkbox-text {
+  text-align: left;
+}
+
 .panel {
+  z-index: 0;
   padding: 0 18px;
-  background-color: white;
+  background-color: rgb(224, 224, 224);
   display: none;
   flex-direction: column;
   overflow: hidden;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation-name: slide-down;
+  animation-duration: .3s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
