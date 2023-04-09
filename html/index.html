@@ -7,38 +7,41 @@
   <body>
     <div class="container">
       <h1>CroG</h1>
-      <form>
-        <label for="search">Căutare:</label>
-        <input type="text" id="search" name="search">
-        <br>
-        <label for="category">Categorie:</label>
-        <select id="category" name="category">
-          <option value="all">Toate</option>
-          <option value="resursa1">Resursa 1</option>
-          <option value="resursa2">Resursa 2</option>
-          <option value="resursa3">Resursa 3</option>
-        </select>
-        <br>
-        <label for="type">Tip:</label>
-        <select id="type" name="type">
-          <option value="all">Toate</option>
-          <option value="video">Video</option>
-          <option value="articol">Articol</option>
-          <option value="prezentare">Prezentare</option>
-        </select>
-        <br>
-        <label for="difficulty">Dificultate:</label>
-        <select id="difficulty" name="difficulty">
-          <option value="all">Toate</option>
-          <option value="usor">Ușor</option>
-          <option value="mediu">Mediu</option>
-          <option value="greu">Greu</option>
-        </select>
-        <br>
-        <br>
-        <button type="submit">Caută</button>
-        <button type="button">Adaugă Resursă</button>
-      </form>
+    <div class="search-container">
+      <input type="text" class="search-bar" id="search" name="search" placeholder="Cautare">
     </div>
-  </body>
-</html>
+  
+  <form>
+    <div class="select-wrapper">
+      <select class="dropdown" id="category" name="category">
+        <option value="all">Categorie</option>
+        <option value="resursa1">Resursa 1</option>
+        <option value="resursa2">Resursa 2</option>
+        <option value="resursa3">Resursa 3</option>
+      </select>
+    </div>
+    
+    <div class="select-wrapper">
+      <select class="dropdown" id="type" name="type">
+        <option value="all">Tip</option>
+        <option value="video">Video</option>
+        <option value="articol">Articol</option>
+        <option value="prezentare">Prezentare</option>
+      </select>
+    </div>
+    
+    <div class="select-wrapper">
+      <select class="dropdown" id="difficulty" name="difficulty">
+        <option value="all">Dificultate</option>
+        <option value="usor">Ușor</option>
+        <option value="mediu">Mediu</option>
+        <option value="greu">Greu</option>
+      </select>
+    </div>
+  </form>
+  <div class="buttons">
+    <button type="submit">Caută</button>
+    <button type="button">Adaugă Resursă</button>
+  </div>
+  
+</div>
