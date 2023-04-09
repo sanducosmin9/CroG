@@ -1,5 +1,6 @@
 body {
-  background-color: #a6c8ff;
+  background-color: #B8B8BF;
+  color: #010A26;
   font-family: sans-serif;
 }
 
@@ -15,6 +16,7 @@ body {
 }
 
 h1 {
+  color: #2E3D59;
   font-size: 3rem;
   margin-bottom: 30px;
 }
@@ -122,8 +124,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0077cc;
-  color: white;
+  background-color: #F27166;
+  color: #ffffff;
   border: none;
   border-radius: 15px;
   cursor: pointer;
@@ -139,5 +141,5 @@ button {
 }
 
 button:hover {
-  background-color: #3a99ff;
+  background-color: #f0594b;
 }
