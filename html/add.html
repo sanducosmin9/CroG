@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
-    <title>Adauga Resurse Creative Coding</title>
-    <link rel="stylesheet" type="text/css" href="../css/add.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CroG - Add Resource</title>
+    <link rel="stylesheet" type="text/css" href="../css/add.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <div class="form-container">
@@ -11,27 +15,27 @@
           <h1>CroG</h1>
         </a>
         <div class="form-row">
-          <label for="titlu">Titlu</label>
-          <input type="text" name="titlu" required />
+          <label id="title">Title</label>
+          <input type="text" name="title" required>
         </div>
         <div class="form-row">
-          <label for="categorie">Categorie</label>
-          <select name="categorie" required>
-            <option value="">--Selecteaza o categorie--</option>
+          <label id="category">Category</label>
+          <select name="category" required>
+            <option value="">--Select a category--</option>
             <option value="WebGL">WebGL</option>
             <option value="WebAssembly">WebAssembly</option>
             <option value="JavaScript">JavaScript</option>
           </select>
         </div>
         <div class="form-row">
-          <label for="link">Link</label>
-          <input type="url" name="link" required />
+          <label id="link">Link</label>
+          <input type="url" name="link" required>
         </div>
         <div class="form-row">
-          <label for="descriere">Descriere</label>
-          <textarea name="descriere" required></textarea>
+          <label id="description">Description</label>
+          <textarea name="description" required></textarea>
         </div>
-        <button type="submit">Adauga resursa</button>
+        <button type="submit">Add Resource</button>
       </form>
     </div>
   </body>

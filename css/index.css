@@ -1,7 +1,8 @@
 body {
   background-color: #B8B8BF;
   color: #010A26;
-  font-family: sans-serif;
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .container {
@@ -115,24 +116,47 @@ button:hover {
 
 input[type="checkbox"] {
   float: left;
-  margin-right: 10px; /* add some space between the checkbox and the label */
+  margin-right: 10px; 
 }
 
 .checkbox-text {
   text-align: left;
+  padding-left: 15px;
+  padding-bottom: 2px;
+  padding-top: 1px;
+  user-select: none;
+}
+
+.header {
+  background-color: #73675C;
+  text-align: center;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  color: white;
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+}
+
+.checkbox-text:hover {
+  background-color: #ccc;
 }
 
 .panel {
   z-index: 0;
-  padding: 0 18px;
-  background-color: rgb(224, 224, 224);
+  background-color: #eee;
   display: none;
   flex-direction: column;
   overflow: hidden;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   animation-name: slide-down;
-  animation-duration: .3s;
+  animation-duration: .2s;
   animation-timing-function: ease-out;
 }
 

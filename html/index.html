@@ -1,85 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CroG</title>
-    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
   </head>
   <body>
-    <div class="container">
+    <div class="header">
       <h1>CroG</h1>
+    </div>
+    <div class="container">
       <div class="search-container">
         <input
           type="text"
           class="search-bar"
           name="search"
-          placeholder="Cautare"
-        />
+          placeholder="Search"
+        >
       </div>
 
       <div class="accordion-container">
         <div class="accordion-selector">
-          <button class="accordion">Limbaj</button>
+          <button class="accordion">Language</button>
           <div class="panel">
-            <div class="checkbox-text">
-              <label>JavaScript</label>
-              <input type="checkbox" value="Tip1" />
-            </div>
-            <div class="checkbox-text">
-              <label>WebGL</label>
-              <input type="checkbox" value="Tip1" />
-            </div>
-            <div class="checkbox-text">
-              <label>WebAssembly</label>
-              <input type="checkbox" value="Tip1" />
-            </div>
+            <label for="checkbox1" class="checkbox-text">
+                JavaScript  
+                <input id="checkbox1" type="checkbox">
+            </label>
+            <label for="checkbox2" class="checkbox-text">
+                WebGL 
+                <input id="checkbox2" type="checkbox">
+            </label>
+            <label for="checkbox3" class="checkbox-text">
+                WebAssembly 
+                <input id="checkbox3" type="checkbox">
+            </label>
           </div>
         </div>
 
         <div class="accordion-selector">
-          <button class="accordion">Stil artistic</button>
+          <button class="accordion">Artistic Style</button>
           <div class="panel">
-            <div class="checkbox-text">
-              <label>2D</label>
-              <input type="checkbox" value="Tip1" />
-            </div>
-            <div class="checkbox-text">
-              <label>3D</label>
-              <input type="checkbox" value="Tip1" />
-            </div>
-            <div class="checkbox-text">
-              <label>animatie</label>
-              <input type="checkbox" value="Tip1" />
-            </div>
+            <label for="checkbox4" class="checkbox-text">
+                2D  
+                <input id="checkbox4" type="checkbox">
+            </label>
+            <label for="checkbox5" class="checkbox-text">
+                3D  
+                <input id="checkbox5" type="checkbox">
+            </label>
+            <label for="checkbox6" class="checkbox-text">
+                Animation
+                <input id="checkbox6" type="checkbox">
+            </label>
           </div>
         </div>
 
         <div class="accordion-selector">
-          <button class="accordion">Maniera de interactiune</button>
+          <button class="accordion">Way of Interaction</button>
           <div class="panel">
-            <div class="checkbox-text">
-              <label>Clasica</label>
-              <input type="checkbox" value="Tip1" />
-            </div>
-            <div class="checkbox-text">
-              <label>Tactila</label>
-              <input type="checkbox" value="Tip1" />
-            </div>
-            <div class="checkbox-text">
-              <label>Vocala</label>
-              <input type="checkbox" value="Tip1" />
-            </div>
+            <label for="checkbox7" class="checkbox-text">
+                Classic 
+                <input id="checkbox7" type="checkbox">
+            </label>
+            <label for="checkbox8" class="checkbox-text">
+                Tactile 
+                <input id="checkbox8" type="checkbox">
+            </label>
+            <label for="checkbox9" class="checkbox-text">
+                Vocal 
+                <input id="checkbox9" type="checkbox">
+            </label>
           </div>
         </div>
       </div>
       <div class="buttons">
-        <button
-          onclick="window.location.href='search-results.html'"
-          type="submit"
-        >
-          Caută
+        <button onclick="window.location.href='search-results.html'" type="submit">
+          Search
         </button>
         <button onclick="window.location.href='add.html'" type="button">
-          Adaugă Resursă
+          Add Resource
         </button>
       </div>
     </div>
