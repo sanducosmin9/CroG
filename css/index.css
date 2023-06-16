@@ -11,7 +11,6 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  max-width: 600px;
   text-align: center;
   padding-top: 50px;
 }
@@ -20,17 +19,6 @@ h1 {
   color: #2E3D59;
   font-size: 3rem;
   margin-bottom: 30px;
-}
-
-.search-bar {
-  background-color: #fdfdfd;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  display: flex;
-  height: 60px;
-  margin: 0 auto;
-  overflow: hidden;
-  width: 700px;
 }
 
 .search-container {
@@ -42,13 +30,6 @@ h1 {
 .search-container input {
   padding-left: 20px;
   font-size: larger;
-}
-
-.search-bar input[type="text"] {
-  background-color: transparent;
-  border: none;
-  flex: 1;
-  font-size: 16px;
 }
 
 .search-bar input[type="text"]:focus {
@@ -162,11 +143,40 @@ input[type="checkbox"] {
 
 @keyframes slide-down {
   from {
-    transform: translateY(-100%);
+    transform: translateY(-30%);
     opacity: 0;
   }
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+
+.search-bar {
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  display: flex;
+  height: 60px;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 700px;
+  }
+
+.search-bar input[type="text"] {
+  background-color: transparent;
+  border: none;
+  flex: 1;
+  font-size: 16px;
+  padding: 10px; /* Add padding to the input */
+}
+
+@media screen and (max-width: 720px) {
+  .search-bar {
+    width: 300px;
+  }
+  .accordion-container{
+    flex-direction: column;
   }
 }

@@ -49,13 +49,16 @@ body {
   
   table {
     width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
   }
   
   th,
   td {
     text-align: left;
     padding: 8px;
+    overflow: scroll;
   }
 
   th:first-child,
@@ -89,5 +92,3 @@ body {
   a:hover {
     text-decoration: underline;
   }
-  
-  
