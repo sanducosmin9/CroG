@@ -40,13 +40,14 @@ function searchResources() {
     }
 
     var xhr = new XMLHttpRequest()
-    xhr.open('POST', '../scripts/queries.php')
+    xhr.open('POST', 'http://localhost:8000/search.php')
     xhr.setRequestHeader('Content-Type', 'application/json')
-    xhr.setRequestHeader('Access-Control-Allow-Methods', '*')
     xhr.onreadystatechange = function () {
       if(xhr.readyState === 4 && xhr.status === 200) {
         var response = xhr.responseText
-        console.log(response)
+        var parsedResponse = JSON.parse(response)
+        console.log(parsedResponse)
+        window.location.href = "search-results.html?results=" + encodeURIComponent(JSON.stringify(parsedResponse));
       }
     }
     xhr.send(JSON.stringify(searchData));

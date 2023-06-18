@@ -15,10 +15,8 @@ function openConnection()
         ];
 
         $dbconn = new PDO($dsn, $dbuser, $dbpass, $options);
-        echo "Connected to the db successfully\n";
         return $dbconn;
     } catch (PDOException $e) {
-        echo "Failed to connect to db: \n" . $e->getMessage();
         exit;
     }
 }

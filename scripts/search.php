@@ -2,6 +2,11 @@
 include 'db_connection.php';
 include 'keywords.php';
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+header('Content-Type: application/json');
+
 $searchData = json_decode(file_get_contents('php://input'), true);
 $searchPrompt = $searchData['search'];
 $languages = $searchData['languages'];
@@ -10,10 +15,8 @@ $waysOfInteraction = $searchData['waysOfInteraction'];
 
 function generateSearchQuery($languages, $artisticStyles, $wayOfInteractions, $prompt, $keywords)
 {
-    // Initialize the WHERE clause
     $where = '';
 
-    // Add conditions for languages
     if (!empty($languages)) {
         $languageConditions = [];
         foreach ($languages as $language) {
@@ -22,7 +25,6 @@ function generateSearchQuery($languages, $artisticStyles, $wayOfInteractions, $p
         $where .= '(' . implode(' OR ', $languageConditions) . ')';
     }
 
-    // Add conditions for artistic styles
     if (!empty($artisticStyles)) {
         if (!empty($where)) {
             $where .= ' AND ';
@@ -34,7 +36,6 @@ function generateSearchQuery($languages, $artisticStyles, $wayOfInteractions, $p
         $where .= '(' . implode(' OR ', $artisticStyleConditions) . ')';
     }
 
-    // Add conditions for way of interactions
     if (!empty($wayOfInteractions)) {
         if (!empty($where)) {
             $where .= ' AND ';
@@ -48,9 +49,11 @@ function generateSearchQuery($languages, $artisticStyles, $wayOfInteractions, $p
 
     $promptQuery = generateQueryBasedOnPrompt($prompt, $keywords);
     $query = "SELECT * FROM resources";
-    if (!empty($where)) {
+    if (!empty($where) && !empty($promptQuery)) {
         $query .= " WHERE $where";
         $query .= " AND (" . implode(' OR ', $promptQuery) . ");";
+    } else if (!empty($where)) {
+        $query .= " WHERE $where;";
     } else if (!empty($promptQuery)) {
         $query .= " WHERE " . implode(' OR ', $promptQuery) . ";";
     } else {
@@ -73,7 +76,21 @@ function generateQueryBasedOnPrompt($prompt, $keywords)
     return $conditions;
 }
 
+function performQuery($query)
+{
+    $pdo = openConnection();
+
+    $statement = $pdo->prepare($query);
+    $statement->execute();
+
+    $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    $pdo = null;
+
+    return $results;
+}
+
 $query = generateSearchQuery($languages, $artisticStyles, $waysOfInteraction, $searchPrompt, getKeywords());
-echo json_encode($query);
+echo json_encode(performQuery($query));
 
 ?>
