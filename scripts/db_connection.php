@@ -21,9 +21,4 @@ function openConnection()
     }
 }
 
-function closeConnection($conn)
-{
-    $conn->close();
-}
-
 ?>

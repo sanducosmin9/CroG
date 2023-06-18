@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CroG - Add Resource</title>
-    <link rel="stylesheet" type="text/css" href="../css/add.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="../css/add.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="form-container">
-      <form>
+      <form id="add-resource-form" method="POST">
         <a href="index.html">
           <h1>CroG</h1>
         </a>
         <div class="form-row">
           <label id="title">Title</label>
-          <input type="text" name="title" required>
+          <input type="text" name="title" required />
         </div>
         <div class="form-row">
-          <label id="category">Category</label>
-          <select name="category" required>
-            <option value="">--Select a language--</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="WebGL">WebGL</option>
-            <option value="WebAssembly">WebAssembly</option>
-            <option value="HTML">HTML</option>
-            <option value="CSS">CSS</option>
-            <option value="Kotlin">Kotlin</option>
-            <option value="Rust">Rust</option>
-            <option value="CPP">C++</option>
+          <label id="resource-type">Resource type</label>
+          <select name="resource-type" required>
+            <option value="">--Select a resource type--</option>
+            <option value="Books">Books</option>
+            <option value="Online Books">Online Books</option>
+            <option value="Courses">Courses</option>
+            <option value="Tools">Tools</option>
+            <option value="Learning Resources">Learning Resources</option>
+            <option value="Communities">Communities</option>
+            <option value="Math">Math</option>
+            <option value="Inspiration">Inspiration</option>
+            <option value="Events">Events</option>
+            <option value="Related">Related</option>
           </select>
         </div>
         <div class="form-row">
-          <label id="category">Artistic Style</label>
-          <select name="category" required>
-            <option value="">--Select an artistic style--</option>
-            <option value="2D">2D</option>
-            <option value="3D">3D</option>
-            <option value="Animation">Animation</option>
-            <option value="Sound">Sound</option>
-            <option value="Music">Music</option>
-            <option value="Graphics">Graphics</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label id="category">Way of Interaction</label>
-          <select name="category" required>
-            <option value="">--Select a way of interaction--</option>
-            <option value="Classic">Classic</option>
+          <label id="resource-subtype">Resource subtype</label>
+          <select name="resource-subtype" required>
+            <option value="">--Select a resource subtype--</option>
+            <option value="Visual Programming">Visual Programming</option>
+            <option value="Sound Programming">Sound Programming</option>
+            <option value="Web Programming">Web Programming</option>
+            <option value="Projection Mapping">Projection Mapping</option>
+            <option value="Online">Online</option>
+            <option value="Hardware">Hardware</option>
+            <option value="Videos">Videos</option>
+            <option value="Articles">Articles</option>
             <option value="Interactive">Interactive</option>
-            <option value="Audio">Audio</option>
-            <option value="Visual">Visual</option>
+            <option value="Talks">Talks</option>
+            <option value="Subreddits">Subreddits</option>
+            <option value="Other">Other</option>
           </select>
         </div>
         <div class="form-row">
           <label id="link">Link</label>
-          <input type="url" name="link" required>
+          <input type="url" name="link" />
         </div>
         <div class="form-row">
           <label id="description">Description</label>
           <textarea name="description" required></textarea>
         </div>
-        <button type="submit">Add Resource</button>
+        <button type="submit" onclick="showPopup()">Add Resource</button>
       </form>
     </div>
+    <div id="snackbar">Successfully added resource!</div>
   </body>
+  <script src="../js/add.js"></script>
+  <script src="../js/add-result.js"></script>
 </html>
