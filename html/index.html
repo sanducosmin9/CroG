@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CroG</title>
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <script src="../js/test.js"></script>
     <div class="header">
       <h1>CroG</h1>
     </div>
@@ -17,103 +21,104 @@
         <input
           type="text"
           class="search-bar"
+          id="searchBar"
           name="search"
           placeholder="Search"
-        >
+        />
       </div>
 
       <div class="accordion-container">
-        <div class="accordion-selector">
+        <div class="accordion-selector-1">
           <button class="accordion">Language</button>
           <div class="panel">
             <label for="js" class="checkbox-text">
               JavaScript
-              <input id="js" type="checkbox">
+              <input id="js" type="checkbox" />
             </label>
             <label for="webGl" class="checkbox-text">
               WebGL
-              <input id="webGl" type="checkbox">
+              <input id="webGl" type="checkbox" />
             </label>
             <label for="webAssembly" class="checkbox-text">
               WebAssembly
-              <input id="webAssembly" type="checkbox">
+              <input id="webAssembly" type="checkbox" />
             </label>
             <label for="html" class="checkbox-text">
               HTML
-              <input id="html" type="checkbox">
+              <input id="html" type="checkbox" />
             </label>
             <label for="css" class="checkbox-text">
               CSS
-              <input id="css" type="checkbox">
+              <input id="css" type="checkbox" />
             </label>
             <label for="kotlin" class="checkbox-text">
               Kotlin
-              <input id="kotlin" type="checkbox">
+              <input id="kotlin" type="checkbox" />
             </label>
             <label for="rust" class="checkbox-text">
               Rust
-              <input id="rust" type="checkbox">
+              <input id="rust" type="checkbox" />
             </label>
             <label for="cpp" class="checkbox-text">
               C++
-              <input id="cpp" type="checkbox">
+              <input id="cpp" type="checkbox" />
             </label>
           </div>
         </div>
 
-        <div class="accordion-selector">
+        <div class="accordion-selector-2">
           <button class="accordion">Artistic Style</button>
           <div class="panel">
             <label for="2d" class="checkbox-text">
               2D
-              <input id="2d" type="checkbox">
+              <input id="2d" type="checkbox" />
             </label>
             <label for="3d" class="checkbox-text">
               3D
-              <input id="3d" type="checkbox">
+              <input id="3d" type="checkbox" />
             </label>
             <label for="animation" class="checkbox-text">
               Animation
-              <input id="animation" type="checkbox">
+              <input id="animation" type="checkbox" />
             </label>
             <label for="sound" class="checkbox-text">
               Sound
-              <input id="sound" type="checkbox">
+              <input id="sound" type="checkbox" />
             </label>
             <label for="music" class="checkbox-text">
               Music
-              <input id="music" type="checkbox">
+              <input id="music" type="checkbox" />
             </label>
             <label for="graphics" class="checkbox-text">
               Graphics
-              <input id="graphics" type="checkbox">
+              <input id="graphics" type="checkbox" />
             </label>
           </div>
         </div>
-        <div class="accordion-selector">
+        <div class="accordion-selector-3">
           <button class="accordion">Way of Interaction</button>
           <div class="panel">
             <label for="checkbox7" class="checkbox-text">
-                Classic 
-                <input id="checkbox7" type="checkbox">
+              Classic
+              <input id="checkbox7" type="checkbox" />
             </label>
             <label for="interactive" class="checkbox-text">
-                Interactive 
-                <input id="interactive" type="checkbox">
+              Interactive
+              <input id="interactive" type="checkbox" />
             </label>
             <label for="audio" class="checkbox-text">
-                Audio 
-                <input id="audio" type="checkbox">
+              Audio
+              <input id="audio" type="checkbox" />
             </label>
             <label for="visual" class="checkbox-text">
-              Visual 
-              <input id="visual" type="checkbox">
-          </label>
+              Visual
+              <input id="visual" type="checkbox" />
+            </label>
           </div>
         </div>
       </div>
       <div class="buttons">
-        <button onclick="window.location.href='search-results.html'" type="submit">
+        <button id="searchButton" onclick="searchResources()" type="submit">
           Search
         </button>
         <button onclick="window.location.href='add.html'" type="button">
