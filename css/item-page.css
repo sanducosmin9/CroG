@@ -1,0 +1,139 @@
+body {
+    background-color: #B8B8BF;
+    color: #010A26;
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    border-radius: 15px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+    margin-top: 5%;
+    max-width: 60%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.header {
+    background-color: #73675C;
+    text-align: center;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 50px;
+}
+
+h1 {
+    color: #2E3D59;
+    font-size: 3rem;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.title,
+.description,
+.link {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    border: 2px solid #2E3D59;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1rem;
+}
+
+.link {
+    font-size: 1rem;
+    color: #F27166;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F27166;
+    color: #ffffff;
+    border: 1px solid #67686b;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    width: 170px;
+    margin: 10px;
+}
+
+.button-container {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.notification {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }  
+
+#delete-btn {
+    background-color: #f0594b;
+}
+
+#submit-btn {
+    background-color: forestgreen;
+}
+
+#delete-btn:hover {
+    background-color: #ec3d2d;
+}
+
+#submit-btn:hover {
+    background-color: rgb(22, 157, 22);
+}
+
+@media (max-width: 600px) {
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+      margin: 10px 0;
+    }
+  }

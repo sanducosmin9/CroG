@@ -1,7 +1,7 @@
 <?php
 include 'db_connection.php';
 
-$pdo = OpenCon();
+$pdo = OpenConnection();
 
 // Read the contents of the Markdown file
 $markdown = file_get_contents('../resources/readme.md');
@@ -71,8 +71,5 @@ foreach ($objects as $object) {
     // Execute the statement
     $statement->execute();
 }
-
-// Lista cu cuvinte cheie, ms Florin
-// bagi acolo forta*
 
 ?>

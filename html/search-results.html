@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
       rel="stylesheet"
     />
+    <script src="../js/login.js"></script>
   </head>
   <body>
     <div class="header">
@@ -28,5 +29,20 @@
       </table>
     </div>
     <script src="../js/search-results.js"></script>
+
+    <div id="login-popup" class="popup">
+      <div class="popup-content">
+        <h2>Admin Login</h2>
+        <form id="admin-login-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <br>
+          <input type="submit" value="Log In">
+        </form>
+      </div>
+    </div>
   </body>
 </html>

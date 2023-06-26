@@ -1,7 +1,7 @@
 var form = document.getElementById("add-resource-form");
 
       form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the form from submitting
+        event.preventDefault();
 
         formData = new FormData(form);
         var xhr = new XMLHttpRequest();
